@@ -1,24 +1,10 @@
-# README
+# Book List App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to my first full-stack application built using Ruby!
 
-Things you may want to cover:
+Skills:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- CRUD functionality.
+- Bootstrap CSS design.
+- Sqlite3 database.
+-
