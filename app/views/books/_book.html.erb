@@ -1,17 +1,8 @@
-<div id="<%= dom_id book %>">
-  <p>
-    <strong>Title name:</strong>
-    <%= book.title_name %>
-  </p>
-
-  <p>
-    <strong>Author name:</strong>
-    <%= book.author_name %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= book.comment %>
-  </p>
-
+<div class="card" style="width: 18rem;" id="<%= dom_id book %>">
+<div class="card-body">
+    <h5 class="card-title"><%= book.title_name %></h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary"><%= book.author_name %></h6>
+    <p class="card-text">Comment: <%= book.comment %></p>
+  </div>  
 </div>
+</br>
