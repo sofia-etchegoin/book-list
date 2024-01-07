@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<%= link_to 'Book Club', root_path, class:"navbar-brand"%>
+<%# Nav Bar %>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to 'Book Club', root_path, class:"navbar-brand"%>
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,18 +9,48 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       
+    <%# About Us %>
+
         <li class="nav-item">
         <%= link_to "About Us", home_about_path, class: "nav-link"%>  
         </li>
-        
+      
+    <%# Books %>
+
         <li class="nav-item">
         <%= link_to "Books", books_path, class: "nav-link"%>  
         </li>
+
+    <%# Add Book %> 
 
         <li class="nav-item">
         <%= link_to "Add Book", new_book_path, class: "nav-link"%>  
         </li>
         
+    <%# Sign Up %> 
+
+        <li class="nav-item">
+        <%= link_to "Sign Up", new_model_registration_path, class: "nav-link"%>  
+        </li>
+
+    <%# Sign In %>
+
+        <li class="nav-item">
+        <%= link_to "Sign in", new_model_session_path, class: "nav-link"%>  
+        </li>
+
+    <%# Sign Out %>
+
+        <li class="nav-item">
+        <%= link_to "Sign Out", destroy_model_session_path, class: "nav-link"%>  
+        </li>
+
+    <%# Edit Profile %>
+
+        <li class="nav-item">
+        <%= link_to "Edit Profile", edit_model_registration_path, class: "nav-link"%>  
+        </li>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
