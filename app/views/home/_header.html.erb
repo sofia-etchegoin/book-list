@@ -21,14 +21,13 @@
         <%= link_to "Books", books_path, class: "nav-link"%>  
         </li>
 
+    <% if user_signed_in?%>
+
     <%# Add Book %> 
 
         <li class="nav-item">
         <%= link_to "Add Book", new_book_path, class: "nav-link"%>  
         </li>
-        
-
-    <% if user_signed_in?%>
 
     <%# Sign Out %>
 
