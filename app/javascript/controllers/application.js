@@ -1,9 +1,10 @@
-import { Application } from "@hotwired/stimulus"
-
+import { Application } from '@hotwired/stimulus'
+import { Turbo } from '@hotwired/turbo-rails'
 const application = Application.start()
 
 // Configure Stimulus development experience
 application.debug = false
-window.Stimulus   = application
+window.Stimulus = application
+Turbo.start()
 
 export { application }
