@@ -27,17 +27,8 @@
         <%= link_to "Add Book", new_book_path, class: "nav-link"%>  
         </li>
         
-    <%# Sign Up %> 
 
-        <li class="nav-item">
-        <%= link_to "Sign Up", new_user_registration_path, class: "nav-link"%>  
-        </li>
-
-    <%# Sign In %>
-
-        <li class="nav-item">
-        <%= link_to "Sign In", new_user_session_path, class: "nav-link"%>  
-        </li>
+    <% if user_signed_in?%>
 
     <%# Sign Out %>
 
@@ -50,6 +41,21 @@
         <li class="nav-item">
         <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link"%>  
         </li>
+
+    <% else %>
+
+    <%# Sign Up %> 
+        <li class="nav-item">
+        <%= link_to "Sign Up", new_user_registration_path, class: "nav-link"%>  
+        </li>
+
+    <%# Sign In %>
+
+        <li class="nav-item">
+        <%= link_to "Sign In", new_user_session_path, class: "nav-link"%>  
+        </li>
+
+    <% end %>
 
       </ul>
       <form class="d-flex" role="search">
