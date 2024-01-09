@@ -5,11 +5,10 @@
     <table class="table table-bordered table-dark table-hover">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col"></th>
           <th scope="col">Title</th>
           <th scope="col">Author</th>
           <th scope="col">Comment</th>
-          <th scope="col">User ID</th>
         </tr>
       </thead>
       <tbody>
@@ -19,13 +18,9 @@
           
           <tr>
             <th scope="row"><%= book.id %></th>
-            <td>
-            <%= link_to book.title_name, book %>
-            <%=  %>
-            </td>
+            <td><%= link_to book.title_name, book %></td>
             <td><%= book.author_name %></td>
             <td><%= book.comment %></td>
-            <td><%= book.user_id %></td>
           </tr>
           
           <% end %>
