@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :models
   resources :books
   get 'home/about'
-  root 'home#index'
+  root 'books#index'
 
 
   
