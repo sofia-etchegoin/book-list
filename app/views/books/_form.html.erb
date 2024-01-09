@@ -26,6 +26,11 @@
     <%= form.text_field :comment, class:"form-control", placeholder:"Comment"%>
   </div>
 
+  <div class="mb-3">
+    
+  <%= form.number_field :user_id, id: :book_user_id, class:"form-control", Value:current_user.id, type:"hidden"%>
+</div>
+
   <div>
     <%= form.submit class:'btn btn-success' %>
   </div>
