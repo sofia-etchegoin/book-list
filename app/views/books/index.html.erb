@@ -9,7 +9,6 @@
           <th scope="col">Title</th>
           <th scope="col">Author</th>
           <th scope="col">Comment</th>
-          <th scope="col">Actions</th>
           <th scope="col">User ID</th>
         </tr>
       </thead>
@@ -20,12 +19,12 @@
           
           <tr>
             <th scope="row"><%= book.id %></th>
-            <td><%= book.title_name %></td>
+            <td>
+            <%= link_to book.title_name, book %>
+            <%=  %>
+            </td>
             <td><%= book.author_name %></td>
             <td><%= book.comment %></td>
-            <td>
-              <%= link_to "Show", book, class: 'btn btn-primary btn-sm' %>
-            </td>
             <td><%= book.user_id %></td>
           </tr>
           
