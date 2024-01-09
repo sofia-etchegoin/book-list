@@ -1,6 +1,6 @@
 # Book App
 
-Welcome to my first full-stack application built using Ruby!
+Welcome to my first Ruby on Rails full-stack app!
 
 ## Getting started:
 
@@ -22,3 +22,5 @@ Skills:
 - Bootstrap CSS design.
 - Sqlite3 database.
 - Authentication using Devise.
+
+Web hosted with Herokku.
