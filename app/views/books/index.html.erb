@@ -1,38 +1,47 @@
+<% if user_signed_in? %>
 
-<div id="books">
-  <table class="table table-bordered table-dark table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Author</th>
-        <th scope="col">Comment</th>
-        <th scope="col">Actions</th>
-        <th scope="col">User ID</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @books.each do |book| %>
 
-        <% if book.user == current_user %>
-        
+  <div id="books">
+    <table class="table table-bordered table-dark table-hover">
+      <thead>
         <tr>
-          <th scope="row"><%= book.id %></th>
-          <td><%= book.title_name %></td>
-          <td><%= book.author_name %></td>
-          <td><%= book.comment %></td>
-          <td>
-            <%= link_to "Show", book, class: 'btn btn-primary btn-sm' %>
-          </td>
-          <td><%= book.user_id %></td>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Comment</th>
+          <th scope="col">Actions</th>
+          <th scope="col">User ID</th>
         </tr>
-        
+      </thead>
+      <tbody>
+        <% @books.each do |book| %>
+
+          <% if book.user == current_user %>
+          
+          <tr>
+            <th scope="row"><%= book.id %></th>
+            <td><%= book.title_name %></td>
+            <td><%= book.author_name %></td>
+            <td><%= book.comment %></td>
+            <td>
+              <%= link_to "Show", book, class: 'btn btn-primary btn-sm' %>
+            </td>
+            <td><%= book.user_id %></td>
+          </tr>
+          
+          <% end %>
+
         <% end %>
+      </tbody>
+    </table>
+  </div>
 
-      <% end %>
-    </tbody>
-  </table>
-</div>
+  <%= link_to "New book", new_book_path, class: 'btn btn-success' %>
 
-<%= link_to "New book", new_book_path, class: 'btn btn-success' %>
+<% else %>
 
+<h1>Welcome to Book Club</h1>
+</br>
+<h3>Sign in to save your favourite books!</h3>
+
+<% end %>
